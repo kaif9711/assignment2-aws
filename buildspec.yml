@@ -19,6 +19,6 @@ phases:
       - echo Pushing the Docker images...
       - docker push $REPO_URI:latest
       - docker push $REPO_URI:$IMAGE_TAG
-      - printf '[{"name":"kaif-app-container","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"app","imageUri":"%s"}]' $REPO_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
